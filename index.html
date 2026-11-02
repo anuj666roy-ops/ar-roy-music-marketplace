@@ -3,220 +3,178 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AR ROY MUSIC | Independent Music Marketplace</title>
-<meta name="theme-color" content="#090909">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100b0d">
+<meta name="description" content="AR ROY MUSIC — Discover independent artists, original songs and dark sounds.">
+<title>AR ROY MUSIC | The Independent Sound House</title>
 <style>
-:root{--bg:#080808;--panel:#141414;--red:#ed252e;--text:#fff;--muted:#aaa;--line:#303030}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+:root{--bg:#100b0d;--panel:#191114;--red:#681d30;--gold:#c5a66a;--cream:#f3eadc;--muted:#b7a8a7;--line:#38242a}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif}
 a{color:inherit;text-decoration:none}
-button,input,select{font:inherit}
-button{cursor:pointer}
-header{position:sticky;top:0;z-index:10;background:#090909ed;border-bottom:1px solid var(--line);padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:14px}
-.logo{font-size:22px;font-weight:900;letter-spacing:2px}
-.logo span{color:var(--red)}
-nav{display:flex;gap:20px;font-size:14px}
-nav a:hover{color:var(--red)}
-.btn{display:inline-block;background:var(--red);color:white;border:0;border-radius:6px;padding:12px 17px;font-weight:700}
-.btn:hover{background:#bd141c}
-.btn.secondary{background:#242424;border:1px solid #444}
-.hero{padding:80px 6% 72px;min-height:400px;background:radial-gradient(ellipse at 85% 40%,#6e1019 0%,#27080c 24%,#100909 48%,#080808 75%);border-bottom:1px solid var(--line)}
-.tag{color:#ff5a62;font-size:12px;letter-spacing:3px;font-weight:bold}
-h1{font-size:clamp(40px,8vw,78px);line-height:.98;max-width:760px;margin:20px 0}
-h1 span{color:var(--red)}
-.hero p{color:#ccc;line-height:1.7;max-width:520px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-section{padding:42px 5%}
-.heading{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
-h2{margin:0;font-size:28px}
-.muted{color:var(--muted);font-size:14px;line-height:1.6}
-.controls{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
-input,select{background:#111;color:white;border:1px solid #444;border-radius:7px;padding:12px;min-width:0}
-#search{flex:1;min-width:170px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.cover{height:155px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#650d16,#19090b 58%,#080808)}
-.cover b{font-size:23px;letter-spacing:2px}
-.cover small{letter-spacing:3px;color:#ff8d92}
-.cardbody{padding:16px}
-.card h3{margin:0 0 8px;font-size:19px}
-.price{font-size:23px;font-weight:800;margin:15px 0}
-.cardbuttons{display:flex;gap:8px;flex-wrap:wrap}
-.cardbuttons button{flex:1}
-.pill{display:inline-block;border:1px solid #733039;color:#ff969b;border-radius:30px;padding:5px 9px;font-size:11px}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
-.formgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.field{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
-.field input,.field select{width:100%}
-.notice{font-size:13px;color:#e6bd7d;line-height:1.6}
-.cartline{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
-footer{border-top:1px solid var(--line);padding:28px 5%;color:var(--muted);font-size:13px;line-height:1.8}
-#cartPanel{display:none;margin:20px 5%;padding:20px;border:1px solid var(--line);border-radius:10px;background:#121212}
-.empty{padding:30px;text-align:center;border:1px dashed #444;border-radius:10px;color:var(--muted)}
-@media(max-width:600px){header{padding:14px 4%;flex-wrap:wrap}nav{order:3;width:100%;justify-content:space-between;gap:8px;font-size:12px}.hero{padding:62px 6%}.hero h1{font-size:48px}section{padding:32px 5%}.heading h2{font-size:24px}}
+.wrap{width:min(1120px,90%);margin:auto}
+header{border-bottom:1px solid var(--line);background:#100b0df2;position:sticky;top:0;z-index:5}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:700;letter-spacing:2px}
+.logo span{color:var(--gold)}
+nav{display:flex;gap:22px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+nav a:hover{color:var(--gold)}
+.hero{padding:90px 0 82px;background:radial-gradient(ellipse at 85% 25%,#67203966,transparent 42%),linear-gradient(120deg,#100b0d,#1b1015 65%,#100b0d);border-bottom:1px solid var(--line)}
+.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif}
+h1{font-size:clamp(48px,9vw,100px);line-height:.91;letter-spacing:-2px;margin:25px 0}
+h1 em{font-weight:400;color:var(--gold)}
+.hero p{max-width:520px;color:var(--muted);font-size:14px;line-height:1.9}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 20px;border:1px solid var(--gold);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.btn.primary{background:var(--gold);color:#170f10;font-weight:700}
+.btn:hover{filter:brightness(1.12)}
+section{padding:65px 0}
+.section-top{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:26px}
+h2{font-size:clamp(34px,5vw,52px);font-weight:500;margin:9px 0}
+.sub{font-size:12px;color:var(--muted);line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.card{background:var(--panel);border:1px solid var(--line);padding:19px;min-width:0}
+.cover{aspect-ratio:1.25;background:linear-gradient(140deg,#4e1828,#211318 58%,#b08a4a);display:flex;align-items:end;padding:17px;margin-bottom:17px;position:relative;overflow:hidden}
+.cover:before{content:"";position:absolute;width:160px;height:160px;border:1px solid #d5b97870;border-radius:50%;right:-35px;top:-35px;box-shadow:0 0 0 20px #d5b97810,0 0 0 40px #d5b97808}
+.cover b{font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1.05;position:relative}
+.tag{font-size:9px;letter-spacing:2px;color:var(--gold);text-transform:uppercase}
+.card h3{font-size:25px;margin:8px 0 3px}
+.card p{font-size:11px;color:var(--muted);line-height:1.7}
+.card-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:17px;border-top:1px solid var(--line);padding-top:13px}
+.price{color:var(--gold);font-size:13px}
+.small-btn{border:1px solid #775343;background:transparent;color:var(--cream);padding:9px 12px;font-size:10px;cursor:pointer}
+.small-btn:hover{background:var(--red)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 25px}
+.filters button,.filters input{border:1px solid var(--line);background:#171013;color:var(--cream);padding:11px 13px;font:inherit;font-size:11px}
+.filters button{cursor:pointer}
+.filters button.active{background:var(--red);border-color:var(--gold)}
+.filters input{flex:1;min-width:150px}
+.band{background:linear-gradient(100deg,#35121e,#1b1115 70%);border-block:1px solid #542432}
+.band-inner{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.big-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,56px);line-height:1.08}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:25px}
+.step{border-top:1px solid var(--gold);padding-top:15px}
+.step strong{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:26px}
+.step h3{font-size:23px;margin:8px 0}
+.step p{font-size:12px;color:var(--muted);line-height:1.8}
+.notice{border:1px solid var(--line);padding:17px;color:var(--muted);font-size:11px;line-height:1.8;margin-top:22px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:11px}
+.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.empty{display:none;color:var(--muted);font-size:13px;padding:20px 0}
+@media(max-width:700px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column}nav{gap:14px}.hero{padding:65px 0}.grid{grid-template-columns:1fr 1fr}.band-inner{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.section-top{align-items:flex-start;flex-direction:column}}
+@media(max-width:430px){.grid{grid-template-columns:1fr}.card{padding:15px}}
 </style>
 </head>
 <body>
 <header>
-  <a class="logo" href="#"><span>AR</span> ROY MUSIC</a>
-  <nav>
-    <a href="#music">Music</a>
-    <a href="#artists">Artists</a>
-    <a href="#sell">Submit Track</a>
-  </nav>
-  <button class="btn secondary" onclick="toggleCart()">Cart (<span id="cartCount">0</span>)</button>
+<div class="wrap nav">
+<a class="logo" href="#">AR <span>ROY</span> MUSIC</a>
+<nav><a href="#music">MUSIC</a><a href="#artists">ARTISTS</a><a href="#sell">SELL YOUR MUSIC</a><a href="#about">ABOUT</a></nav>
+</div>
 </header>
 
 <main>
-<div class="hero">
-  <div class="tag">INDEPENDENT MUSIC • NO LIMITS</div>
-  <h1>YOUR SOUND.<br><span>YOUR EMPIRE.</span></h1>
-  <p>Discover independent artists, explore new sounds and build your music collection. Welcome to the AR ROY music world.</p>
-  <div class="actions">
-    <a class="btn" href="#music">EXPLORE MUSIC ↗</a>
-    <a class="btn secondary" href="#sell">SUBMIT YOUR TRACK</a>
-  </div>
+<section class="hero">
+<div class="wrap">
+<div class="eyebrow">Independent sound · Since the beginning</div>
+<h1>YOUR SOUND.<br><em>YOUR EMPIRE.</em></h1>
+<p>A home for original music and independent artists. Discover your next sound, support emerging creators, and give your music a place to be heard.</p>
+<div class="actions"><a class="btn primary" href="#music">Explore the collection</a><a class="btn" href="#sell">For independent artists</a></div>
 </div>
+</section>
 
 <section id="music">
-  <div class="heading">
-    <div><div class="tag">THE SOUND OF NOW</div><h2 style="margin-top:9px">Explore Music</h2></div>
-    <span class="muted">Independent artists. Original sound.</span>
-  </div>
-  <div class="controls">
-    <input id="search" placeholder="Search song or artist..." oninput="renderTracks()">
-    <select id="genreFilter" onchange="renderTracks()">
-      <option value="">All genres</option>
-      <option>Dark Drill</option><option>Hip-Hop</option>
-      <option>Punjabi</option><option>Pop</option><option>Melodic</option>
-    </select>
-  </div>
-  <div id="trackGrid" class="grid"></div>
-  <p class="notice">Demo catalogue: sample listings are examples, not verified tracks for sale.</p>
-</section>
-
-<div id="cartPanel">
-  <div class="heading"><h2>Your Cart</h2><button class="btn secondary" onclick="toggleCart()">Close</button></div>
-  <div id="cartItems"></div>
-  <p>Total: <strong id="cartTotal">₹0</strong></p>
-  <button class="btn" onclick="checkoutDemo()">Continue to checkout</button>
-  <p class="notice">Checkout is a demo. No payment will be taken and no download will be unlocked.</p>
+<div class="wrap">
+<div class="section-top"><div><div class="eyebrow">The collection</div><h2>Featured sounds</h2><div class="sub">A preview collection from the AR ROY MUSIC house.</div></div></div>
+<div class="filters">
+<input id="search" type="search" placeholder="Search songs or artists..." aria-label="Search songs or artists">
+<button class="active" data-genre="All">All sounds</button>
+<button data-genre="Dark Drill">Dark Drill</button>
+<button data-genre="Hip-Hop">Hip-Hop</button>
+<button data-genre="Romantic">Romantic</button>
 </div>
-
-<section id="artists">
-  <div class="tag">CREATORS FIRST</div>
-  <h2 style="margin:10px 0">Built for Independent Artists</h2>
-  <p class="muted">Showcase your sound and prepare your music listing for the marketplace.</p>
-  <div class="grid">
-    <div class="panel"><div class="tag">01 / DISCOVER</div><h3>Find New Sound</h3><p class="muted">Explore music across different genres and independent artists.</p></div>
-    <div class="panel"><div class="tag">02 / SUBMIT</div><h3>Show Your Work</h3><p class="muted">Add a local preview listing to see how your artist card looks.</p></div>
-    <div class="panel"><div class="tag">03 / GROW</div><h3>Build Your Brand</h3><p class="muted">Prepare your artist identity before public marketplace publishing.</p></div>
-  </div>
+<div class="grid" id="tracks">
+<article class="card" data-title="The Devil World AR ROY" data-genre="Dark Drill">
+<div class="cover"><b>THE<br>DEVIL WORLD</b></div><div class="tag">Dark Drill · Featured</div>
+<h3>THE DEVIL WORLD</h3><p>AR ROY · Artist preview</p>
+<div class="card-bottom"><span class="price">Coming soon</span><button class="small-btn" onclick="preview('THE DEVIL WORLD')">View details</button></div>
+</article>
+<article class="card" data-title="Midnight Stories Independent Artist" data-genre="Hip-Hop">
+<div class="cover" style="background:linear-gradient(140deg,#25242a,#51402d,#171115)"><b>MIDNIGHT<br>STORIES</b></div><div class="tag">Hip-Hop · Concept</div>
+<h3>Midnight Stories</h3><p>Independent artist · Concept listing</p>
+<div class="card-bottom"><span class="price">Coming soon</span><button class="small-btn" onclick="preview('Midnight Stories')">View details</button></div>
+</article>
+<article class="card" data-title="Yaadon Ka Saya Independent Artist" data-genre="Romantic">
+<div class="cover" style="background:linear-gradient(140deg,#542838,#211a25,#9d7754)"><b>YAADON<br>KA SAYA</b></div><div class="tag">Melodic · Concept</div>
+<h3>Yaadon Ka Saya</h3><p>Independent artist · Concept listing</p>
+<div class="card-bottom"><span class="price">Coming soon</span><button class="small-btn" onclick="preview('Yaadon Ka Saya')">View details</button></div>
+</article>
+</div>
+<div class="empty" id="empty">No matching tracks found. Try another search.</div>
+<div class="notice">These are illustrative preview listings, not confirmed releases for sale. No payment is taken on this website at present.</div>
+</div>
 </section>
+
+<div class="band" id="artists"><section>
+<div class="wrap band-inner">
+<div><div class="eyebrow">For the creators</div><div class="big-quote">Independent music deserves a <em>better stage.</em></div></div>
+<div><p class="sub">AR ROY MUSIC is being built around artists, original work, and a clear, respectful selling process. Artist listings will be published only after details and ownership are reviewed.</p><a class="btn" href="#sell">Submit your music</a></div>
+</div>
+</section></div>
 
 <section id="sell">
-  <div class="tag">YOUR MUSIC, YOUR NAME</div>
-  <h2 style="margin:10px 0 20px">Submit a Track</h2>
-  <div class="panel">
-    <form id="trackForm">
-      <div class="formgrid">
-        <label class="field">Artist name<input id="artist" maxlength="60" required placeholder="Your artist name"></label>
-        <label class="field">Track title<input id="title" maxlength="80" required placeholder="Your song title"></label>
-        <label class="field">Genre<select id="genre" required><option>Dark Drill</option><option>Hip-Hop</option><option>Punjabi</option><option>Pop</option><option>Melodic</option></select></label>
-        <label class="field">Price in ₹<input id="price" type="number" min="1" max="10000" value="49" required></label>
-      </div>
-      <button class="btn" type="submit">ADD PREVIEW LISTING</button>
-    </form>
-    <p class="notice">Listings are saved only in this browser. They are not uploaded for other visitors, and this form does not verify music ownership.</p>
-    <div id="myListings" class="grid"></div>
-  </div>
+<div class="wrap">
+<div class="eyebrow">Join the house</div><h2>Bring your sound here.</h2>
+<p class="sub">Interested in listing your original music? Start by preparing your artist details and track information.</p>
+<div class="steps">
+<div class="step"><strong>01</strong><h3>Introduce yourself</h3><p>Prepare your artist name, contact email, and a short introduction.</p></div>
+<div class="step"><strong>02</strong><h3>Share your track</h3><p>Prepare the song title, genre, artwork, and a private preview link.</p></div>
+<div class="step"><strong>03</strong><h3>Confirm ownership</h3><p>Confirm you have the rights needed to submit and sell the recording.</p></div>
+</div>
+<div class="actions"><a class="btn primary" href="mailto:arroy.music@example.com?subject=Artist%20Submission%20Enquiry">Prepare an email enquiry</a></div>
+<div class="notice">Important: Replace <b>arroy.music@example.com</b> in this page's code with your real business email before publishing. This demo does not upload songs or collect submissions online. Agree on pricing, commission, payout timing, and rights in writing before accepting any artist's music.</div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap">
+<div class="eyebrow">Our principles</div><h2>Built on the music.</h2>
+<div class="grid">
+<div class="card"><div class="tag">01 / Originality</div><h3>Respect the creator</h3><p>Artists should submit only work they own or are authorised to distribute.</p></div>
+<div class="card"><div class="tag">02 / Transparency</div><h3>Clear terms</h3><p>Prices, commissions, refunds, and payout terms should be shared before any sale.</p></div>
+<div class="card"><div class="tag">03 / Trust</div><h3>Honest by design</h3><p>No fake sales, reviews, verification badges, or promises of secure checkout.</p></div>
+</div>
+</div>
 </section>
 </main>
 
-<footer>
-  <strong>AR ROY MUSIC</strong><br>
-  YOUR SOUND. YOUR EMPIRE.<br>
-  © 2026 AR ROY Music. All rights reserved.<br>
-  <span>Demo marketplace — real payments and secure downloads are not enabled.</span>
-</footer>
+<footer><div class="wrap footer-inner"><div class="logo">AR <span>ROY</span> MUSIC</div><div>Independent sounds. Original vision.</div><div>© <span id="year"></span> AR ROY MUSIC</div></div></footer>
 
 <script>
-const starterTracks=[
-{id:1,title:"THE DEVIL WORLD",artist:"A.R. ROY",genre:"Dark Drill",price:49,featured:true},
-{id:2,title:"Midnight Vibes",artist:"Independent Artist",genre:"Hip-Hop",price:29},
-{id:3,title:"Broken Memories",artist:"Independent Artist",genre:"Melodic",price:39}
-];
-let tracks=[...starterTracks];
-let cart=[];
-function money(n){return "₹"+Number(n).toLocaleString("en-IN")}
-function renderTracks(){
- const q=document.getElementById("search").value.toLowerCase().trim();
- const g=document.getElementById("genreFilter").value;
- const list=tracks.filter(t=>(t.title+" "+t.artist).toLowerCase().includes(q)&&(!g||t.genre===g));
- const grid=document.getElementById("trackGrid");
- grid.replaceChildren();
- if(!list.length){grid.innerHTML='<div class="empty">No tracks found. Try another search.</div>';return}
- list.forEach(t=>{
-  const card=document.createElement("article");card.className="card";
-  const cover=document.createElement("div");cover.className="cover";
-  const tag=document.createElement("small");tag.textContent="AR ROY • MUSIC";
-  const titleArt=document.createElement("b");titleArt.textContent=t.title.toUpperCase();
-  cover.append(tag,titleArt);
-  const body=document.createElement("div");body.className="cardbody";
-  const h=document.createElement("h3");h.textContent=t.title;
-  const meta=document.createElement("p");meta.className="muted";meta.textContent=t.artist+" · "+t.genre;
-  const pill=document.createElement("span");pill.className="pill";pill.textContent=t.featured?"FEATURED":"INDEPENDENT";
-  const price=document.createElement("div");price.className="price";price.textContent=money(t.price);
-  const buttons=document.createElement("div");buttons.className="cardbuttons";
-  const preview=document.createElement("button");preview.className="btn secondary";preview.textContent="Preview";
-  preview.onclick=()=>alert("No audio preview has been attached to this listing yet.");
-  const add=document.createElement("button");add.className="btn";add.textContent="Add to Cart";
-  add.onclick=()=>addToCart(t.id);
-  buttons.append(preview,add);body.append(h,meta,pill,price,buttons);card.append(cover,body);grid.append(card);
- });
-}
-function addToCart(id){const t=tracks.find(x=>x.id===id);if(!t)return;cart.push(t);updateCart();alert(t.title+" added to your demo cart.");}
-function updateCart(){
- document.getElementById("cartCount").textContent=cart.length;
- const box=document.getElementById("cartItems");box.replaceChildren();let total=0;
- if(!cart.length){box.innerHTML='<div class="empty">Your cart is empty.</div>'}
- cart.forEach((t,i)=>{
-  total+=Number(t.price);
-  const row=document.createElement("div");row.className="cartline";
-  const label=document.createElement("span");label.textContent=t.title+" — "+money(t.price);
-  const remove=document.createElement("button");remove.className="btn secondary";remove.textContent="Remove";
-  remove.onclick=()=>{cart.splice(i,1);updateCart()};
-  row.append(label,remove);box.append(row);
- });
- document.getElementById("cartTotal").textContent=money(total);
-}
-function toggleCart(){const p=document.getElementById("cartPanel");p.style.display=p.style.display==="block"?"none":"block";if(p.style.display==="block"){updateCart();p.scrollIntoView({behavior:"smooth"})}}
-function checkoutDemo(){alert("Demo only: no payment has been taken. Real checkout needs a payment provider and a secure backend.");}
-document.getElementById("trackForm").addEventListener("submit",function(e){
- e.preventDefault();
- const t={id:Date.now(),title:document.getElementById("title").value.trim(),artist:document.getElementById("artist").value.trim(),genre:document.getElementById("genre").value,price:Number(document.getElementById("price").value)};
- if(!t.title||!t.artist||!Number.isFinite(t.price)||t.price<1)return;
- tracks.push(t);
- const saved=JSON.parse(localStorage.getItem("arRoyDemoListings")||"[]");
- saved.push(t);
- localStorage.setItem("arRoyDemoListings",JSON.stringify(saved));
- renderTracks();
- const card=document.createElement("div");card.className="panel";
- const h=document.createElement("h3");h.textContent=t.title;
- const p=document.createElement("p");p.className="muted";p.textContent=t.artist+" · "+t.genre+" · "+money(t.price);
- const note=document.createElement("p");note.className="notice";note.textContent="Local preview listing only";
- card.append(h,p,note);document.getElementById("myListings").prepend(card);
- this.reset();document.getElementById("price").value=49;
- alert("Preview listing added on this device. It is not published to other visitors.");
+document.getElementById('year').textContent=new Date().getFullYear();
+let chosen='All';
+const cards=[...document.querySelectorAll('#tracks .card')];
+function filterTracks(){
+const q=document.getElementById('search').value.toLowerCase().trim();
+let visible=0;
+cards.forEach(card=>{
+const matchText=card.dataset.title.toLowerCase().includes(q);
+const matchGenre=chosen==='All'||card.dataset.genre===chosen;
+card.style.display=matchText&&matchGenre?'block':'none';
+if(matchText&&matchGenre)visible++;
 });
-try{
- const saved=JSON.parse(localStorage.getItem("arRoyDemoListings")||"[]");
- saved.forEach(t=>{if(t&&t.title&&t.artist&&Number.isFinite(Number(t.price))){tracks.push({...t,id:Number(t.id)||Date.now()+Math.random()})}});
-}catch(e){}
-renderTracks();
+document.getElementById('empty').style.display=visible?'none':'block';
+}
+document.getElementById('search').addEventListener('input',filterTracks);
+document.querySelectorAll('[data-genre]').forEach(button=>button.addEventListener('click',()=>{
+chosen=button.dataset.genre;
+document.querySelectorAll('[data-genre]').forEach(b=>b.classList.toggle('active',b===button));
+filterTracks();
+}));
+function preview(name){alert(name+' is a preview listing. Sales and audio playback are not enabled yet.');}
 </script>
 </body>
-  </html>
-  
+</html>
