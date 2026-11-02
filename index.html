@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AR ROY Music</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090909;color:#fff;font-family:Arial,sans-serif}
+header{padding:24px 18px;background:#151515;border-bottom:1px solid #333}
+.logo{font-size:28px;font-weight:900;letter-spacing:2px;color:#ff3030}
+header p{color:#bbb;margin-bottom:0}
+nav{padding:14px 18px;display:flex;gap:18px;flex-wrap:wrap;background:#111}
+a{color:#fff;text-decoration:none}
+.hero{padding:55px 20px;text-align:center;background:linear-gradient(135deg,#250000,#111,#300707)}
+.hero h1{font-size:38px;margin:0 0 12px}
+.hero p{color:#ddd}
+.btn{display:inline-block;padding:12px 18px;background:#e52626;color:white;border:0;border-radius:7px;font-weight:bold;cursor:pointer}
+section{padding:26px 18px}
+h2{margin-top:0}
+.tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.track{padding:18px;border:1px solid #333;border-radius:12px;background:#151515}
+.track h3{margin-top:0}
+.muted{color:#aaa;font-size:14px}
+.price{font-size:22px;font-weight:bold;margin:14px 0}
+input,select{width:100%;padding:12px;margin:7px 0 14px;border-radius:7px;border:1px solid #444;background:#111;color:white}
+footer{text-align:center;padding:24px;color:#aaa;border-top:1px solid #333}
+.note{color:#ffcc80;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">AR ROY MUSIC</div>
+  <p>Independent music. One place.</p>
+</header>
+<nav>
+  <a href="#music">Music</a>
+  <a href="#artists">Artists</a>
+  <a href="#sell">Sell Your Music</a>
+</nav>
+<div class="hero">
+  <h1>YOUR SOUND. YOUR WORLD.</h1>
+  <p>Discover independent artists and original tracks.</p>
+  <a class="btn" href="#music">Explore Music</a>
+</div>
+<section id="music">
+  <h2>🎵 Featured Tracks</h2>
+  <p class="muted">A preview of the AR ROY music store.</p>
+  <div class="tracks">
+    <article class="track">
+      <h3>THE DEVIL WORLD</h3>
+      <p class="muted">A.R. ROY · Dark Drill</p>
+      <div class="price">₹49</div>
+      <button class="btn" onclick="demoBuy('THE DEVIL WORLD')">Buy Track</button>
+    </article>
+    <article class="track">
+      <h3>Midnight Vibes</h3>
+      <p class="muted">Independent Artist · Hip-Hop</p>
+      <div class="price">₹29</div>
+      <button class="btn" onclick="demoBuy('Midnight Vibes')">Buy Track</button>
+    </article>
+    <article class="track">
+      <h3>Broken Memories</h3>
+      <p class="muted">Independent Artist · Melodic</p>
+      <div class="price">₹39</div>
+      <button class="btn" onclick="demoBuy('Broken Memories')">Buy Track</button>
+    </article>
+  </div>
+  <p class="note">Demo listings only. Sample tracks are not real products for sale yet.</p>
+</section>
+<section id="artists">
+  <h2>🎤 For Independent Artists</h2>
+  <p>Build your audience and prepare your music for the marketplace.</p>
+</section>
+<section id="sell">
+  <h2>📀 Submit Your Track</h2>
+  <form id="trackForm">
+    <label>Artist name</label>
+    <input id="artist" required placeholder="Your artist name">
+    <label>Track title</label>
+    <input id="title" required placeholder="Your song title">
+    <label>Genre</label>
+    <select id="genre">
+      <option>Hip-Hop / Drill</option>
+      <option>Pop</option>
+      <option>Punjabi</option>
+      <option>Lo-fi</option>
+      <option>Other</option>
+    </select>
+    <button class="btn" type="submit">Add Preview Listing</button>
+  </form>
+  <p class="muted" id="result">Listings added here are only a local demo on this device.</p>
+  <div id="submitted" class="tracks"></div>
+</section>
+<footer>© 2026 AR ROY Music · Independent Artist Marketplace</footer>
+<script>
+function demoBuy(title){
+ alert('Demo only: '+title+'. Real payments and downloads are not enabled yet.');
+}
+document.getElementById('trackForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const artist=document.getElementById('artist').value.trim();
+ const title=document.getElementById('title').value.trim();
+ const genre=document.getElementById('genre').value;
+ const card=document.createElement('article');
+ card.className='track';
+ const h=document.createElement('h3');h.textContent=title;
+ const p=document.createElement('p');p.className='muted';p.textContent=artist+' · '+genre;
+ card.append(h,p);
+ document.getElementById('submitted').prepend(card);
+ document.getElementById('result').textContent='Preview added on this page. It is not published to a shared marketplace.';
+ this.reset();
+});
+</script>
+</body>
+</html>
